@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Misti - Restaurante y Recetas</title>
+    <!-- Incluir el framework Tailwind CSS para los estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Enlazar el archivo CSS -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Area de Cabecera y Navegación -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-gray-800 rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">
+                Sabores del Misti
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#menu" class="text-gray-600 hover:text-gray-900 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">Menú</a>
+                <a href="#recetas" class="text-gray-600 hover:text-gray-900 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">Recetas</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Area Principal (Hero) -->
+    <main>
+        <section id="hero" class="relative bg-cover bg-center h-[60vh] md:h-[80vh] flex items-center justify-center text-white"
+            style="background-image: url('https://www.machupicchuterra.com/wp-content/uploads/volcan-misti-arequipa-full.jpg');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="z-10 text-center p-6 rounded-lg backdrop-blur-sm bg-black/30">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Sabores del misti</h1>
+                <p class="text-xl md:text-2xl font-light italic">Exquisitos platos y recetas arequipeñas</p>
+            </div>
+        </section>
+
+        <!-- Creación del Menú -->
+        <section id="menu" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">NUESTRO MENU DE HOY</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Primer Plato -->
+                    <div class="bg-gray-50 rounded-lg shadow-xl p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                        <img src="img/rocoto.png" alt="Plato 1" class="rounded-lg mb-4 object-cover h-48 w-full">
+                        <h3 class="text-2xl font-semibold mb-2">Rocoto Relleno</h3>
+                        <p class="text-gray-600 flex-grow">Plato emblemático de la gastronomía de arequipeña que consiste en rocoto, un fruto picante de forma redonda, relleno de una mezcla de carne molida, especias, aceitunas y otros ingredientes, cubierto con queso derretido y horneado.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-gray-900">S/. 20.00</span>
+                            <button onclick="orderDish('Rocoto Relleno')" class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Segundo Plato -->
+                    <div class="bg-gray-50 rounded-lg shadow-xl p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                        <img src="img/ocopa.png" alt="Plato 2" class="rounded-lg mb-4 object-cover h-48 w-full">
+                        <h3 class="text-2xl font-semibold mb-2">Ocopa arequipeña</h3>
+                        <p class="text-gray-600 flex-grow">Plato de entrada originario de Arequipa, que consiste en papas cocidas bañadas con una salsa verde y picante hecha de huacatay, maní, ají mirasol, queso fresco y galletas de animalitos, a veces complementada con cebolla, ajo y culantro, y servida tradicionalmente con huevo duro y aceituna.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-gray-900">S/. 25.00</span>
+                            <button onclick="orderDish('Ocopa arequipeña')" class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Tercer Plato -->
+                    <div class="bg-gray-50 rounded-lg shadow-xl p-6 transform hover:scale-105 transition-transform duration-300 flex flex-col">
+                        <img src="img/patata.png" alt="Plato 3" class="rounded-lg mb-4 object-cover h-48 w-full">
+                        <h3 class="text-2xl font-semibold mb-2">Pastel de papas</h3>
+                        <p class="text-gray-600 flex-grow">Es una de las guarniciones más populares y tradicionales de la cuidad blanca, Arequipa. Al tener un sabor tan delicado acompaña una variedad de carnes en salsas, guisos, al horno o a la parrilla, sin embargo, para los peruanos es un clásico servirlo con rocoto relleno.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-2xl font-bold text-gray-900">S/. 15.00</span>
+                            <button onclick="orderDish('Pastel de papas')" class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Recetas -->
+        <section id="recetas" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Nuestras Recetas</h2>
+                <div class="grid lg:grid-cols-2 gap-10">
+                    <!-- Receta 1: Caldo blanco -->
+                    <div class="bg-white rounded-lg shadow-xl p-6 cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="toggleRecipe('recipe1')">
+                        <h3 class="text-2xl font-semibold mb-2 flex items-center justify-between">
+                            Caldo Blanco
+                            <span class="text-xl transform rotate-0 transition-transform duration-300" id="icon-recipe1">+</span>
+                        </h3>
+                        <div id="recipe1" class="recipe-content mt-4 text-gray-600">
+                            <p class="mb-2 font-bold">Ingredientes:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>80gr de arroz</li>
+                                <li>80gr de garbanzos</li>
+                                <li>8 morayas pequeñas o chuño</li>
+                                <li>500gr papa blanca pelada</li>
+                                <li>500gr de yuca pelada</li>
+                                <li>2 zanahorias medianas en bastones</li>
+                                <li>4 ramas de apio + 1 poro</li>
+                                <li>4 dientes de ajo + perejil picado</li>
+                                <li>1 cebolla grande + 1 cebolla china</li>
+                                <li>1 nabo + aceite</li>
+                                <li>1 kg de carne de cordero o res</li>
+                            </ul>
+                            <p class="mb-2 font-bold">Instrucciones:</p>
+                            <ol class="list-decimal list-inside space-y-2">
+                                <li>Cocer en agua hirviendo garbanzos, ajo, poro, nabo, yuca, chuño.</li>
+                                <li>Seguidamente se agrega la carne y se deja hervir con la olla semitapada y a fuego bajo</li>
+                                <li>Posteriormente cuando la carne este suave agregar las papas, apio, zanahorias.</li>
+                                <li>Finalmente agregar el arroz, verdura picada y cebolla china; lista para servir.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Receta 2: Rocoto Relleno -->
+                    <div class="bg-white rounded-lg shadow-xl p-6 cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="toggleRecipe('recipe2')">
+                        <h3 class="text-2xl font-semibold mb-2 flex items-center justify-between">
+                            Rocoto Relleno
+                            <span class="text-xl transform rotate-0 transition-transform duration-300" id="icon-recipe2">+</span>
+                        </h3>
+                        <div id="recipe2" class="recipe-content mt-4 text-gray-600">
+                            <p class="mb-2 font-bold">Ingredientes:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li>4 rocotos grandes</li>
+                                <li>Carne molida o picada en cuadrados</li>
+                                <li>Huevos, aceitunas y pasas</li>
+                                <li>Leche, queso fresco</li>
+                                <li>Ajo, cebolla, ají panca</li>
+                            </ul>
+                            <p class="mb-2 font-bold">Instrucciones:</p>
+                            <ol class="list-decimal list-inside space-y-2">
+                                <li>Retirar las venas y semillas del rocoto y hervir varias veces para quitar el picor.</li>
+                                <li>Preparar el relleno de carne con especias, huevos duros, aceitunas y pasas.</li>
+                                <li>Rellenar los rocotos con la carne y cubrir con una rodaja de queso.</li>
+                                <li>Hornear en una bandeja con una mezcla de leche y queso para gratinar.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para el mensaje de pedido -->
+    <div id="orderModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <h3 class="text-2xl font-bold mb-4">Pedido Recibido</h3>
+            <p id="modalMessage" class="mb-4 text-lg">Tu pedido ha sido registrado con éxito.</p>
+            <button onclick="closeModal()" class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600">
+                Cerrar
+            </button>
+        </div>
+    </div>
+    
+    
+    <!-- Sección de Pie de Página -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sabores del Misti. Todos los derechos reservados.</p>
+            <p class="mt-2">Producto Académico <a href="https://www.google.com.pe/" class="underline hover:text-orange-500"> 01</a>.</p>
+        </div>
+    </footer>
+   
+    <!-- Enlazar el archivo JavaScript -->
+    <script src="scripts.js" defer></script>
+    <script src="services.js" defer></script>
+
+</body>
+</html>

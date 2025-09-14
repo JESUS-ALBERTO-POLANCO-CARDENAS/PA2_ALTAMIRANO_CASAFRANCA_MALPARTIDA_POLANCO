@@ -1,0 +1,18 @@
+/* Usar la fuente Inter de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f3e9; /* Un color de fondo suave y cálido */
+}
+
+/* Estilos personalizados para la animación de las recetas */
+.recipe-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.recipe-content.open {
+    max-height: 500px; /* Altura máxima para permitir la transición */
+}
