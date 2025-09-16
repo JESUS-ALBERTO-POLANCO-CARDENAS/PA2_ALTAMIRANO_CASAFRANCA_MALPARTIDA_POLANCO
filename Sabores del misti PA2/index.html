@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Misti - Restaurante y Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-gray-800 rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">
+                Sabores del Misti
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#menu" class="text-gray-600 hover:text-gray-900 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">Menú</a>
+                <a href="#recetas" class="text-gray-600 hover:text-gray-900 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">Recetas</a>
+                <a href="#cart" class="text-gray-600 hover:text-gray-900 font-semibold rounded-md p-2 hover:bg-gray-100 transition-colors duration-300">Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="relative bg-cover bg-center h-[60vh] md:h-[80vh] flex items-center justify-center text-white"
+            style="background-image: url('https://www.machupicchuterra.com/wp-content/uploads/volcan-misti-arequipa-full.jpg');">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="z-10 text-center p-6 rounded-lg backdrop-blur-sm bg-black/30">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Sabores del Misti</h1>
+                <p class="text-xl md:text-2xl font-light italic">Exquisitos platos y recetas arequipeñas</p>
+            </div>
+        </section>
+
+        <section id="menu" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">NUESTRO MENÚ DE HOY</h2>
+                <div id="menu-items-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    </div>
+            </div>
+        </section>
+
+        <section id="cart" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">CARRITO DE COMPRAS</h2>
+                <div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl mx-auto">
+                    <ul id="cart-items-list" class="divide-y divide-gray-200">
+                        </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-300 flex justify-between items-center">
+                        <span class="text-2xl font-bold">Total:</span>
+                        <span id="cart-total" class="text-2xl font-bold text-orange-500">S/. 0.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recetas" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">NUESTRAS RECETAS</h2>
+                <div id="recipes-container" class="grid lg:grid-cols-2 gap-10">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="orderModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <h3 class="text-2xl font-bold mb-4">¡Listo!</h3>
+            <p id="modalMessage" class="mb-4 text-lg">Tu pedido ha sido registrado con éxito.</p>
+            <button onclick="closeModal()" class="bg-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600">
+                Cerrar
+            </button>
+        </div>
+    </div>
+    
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Sabores del Misti. Todos los derechos reservados.</p>
+            <p class="mt-2">Producto Académico 02 <a href="https://www.google.com.pe/" class="underline hover:text-orange-500"> PARCIAL</a>.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>
